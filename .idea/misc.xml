@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_api.xml" value="0.15789473684210525" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_coroutines.xml" value="0.15789473684210525" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_ok_http.xml" value="0.20512820512820512" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_okhttp_api.xml" value="0.15756578947368421" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_retrofit_api.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_retrofit_crud.xml" value="0.20512820512820512" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_tabbed.xml" value="0.15789473684210525" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_tik_tok_styled.xml" value="0.15789473684210525" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/dialog_box.xml" value="0.15789473684210525" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/fragment_action.xml" value="0.14901315789473685" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/fragment_widget.xml" value="0.15789473684210525" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/item_layout.xml" value="0.14901315789473685" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/tiktok_ui.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

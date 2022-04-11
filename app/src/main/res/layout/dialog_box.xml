@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="10dp"
+    android:background="@color/white"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="150dp">
+
+    <TextView
+        android:id="@+id/textview"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Alert dialog from coroutines as well as normal functionality"/>
+
+    <TextView
+        android:textSize="20sp"
+        android:textColor="@color/purple_700"
+        android:id="@+id/confirmBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"/>
+
+    <TextView
+        android:textSize="20sp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/purple_700"
+        android:id="@+id/cancelBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@id/confirmBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cancel"/>
+</RelativeLayout>

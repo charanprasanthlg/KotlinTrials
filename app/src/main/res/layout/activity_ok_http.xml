@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".networking.OkHttpActivity">
+
+    <TextView
+        android:text="Retrofit CRUD"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/editText_userId"
+        android:hint="User ID"
+        android:inputType="number"
+        android:maxLength="8"
+        android:textColor="@color/black"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColorHint="#848484"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/editText_title"
+        android:hint="Title"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColorHint="#848484"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/editText_body"
+        android:hint="Body"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColorHint="#848484"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:id="@+id/button_submitBtn"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textColorHint="#848484"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
