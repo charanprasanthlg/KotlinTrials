@@ -11,6 +11,7 @@ import com.example.kotlintrials.adapters.RecyclerAdapter
 import com.example.kotlintrials.coroutines.CoroutinesActivity
 import com.example.kotlintrials.retrofitapigetrequest.RetrofitApiActivity
 import com.example.kotlintrials.retrofitcrud.RetrofitCrudActivity
+import com.example.kotlintrials.swipecards.SwipeCardActivity
 import com.example.kotlintrials.tiktok.TikTokStyledActivity
 
 
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View, View.OnClic
     lateinit var retrofitBtn: Button
     lateinit var coroutineBtn: Button
     lateinit var retrofitCrudActivityBtn: Button
+    lateinit var swipeCardsActivityBtn: Button
     lateinit var tabbedActivityBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,6 +56,7 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View, View.OnClic
         coroutineBtn.setOnClickListener(this)
         retrofitCrudActivityBtn.setOnClickListener(this)
         tabbedActivityBtn.setOnClickListener(this)
+        swipeCardsActivityBtn.setOnClickListener(this)
     }
 
     override fun initView() {
@@ -64,6 +67,7 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View, View.OnClic
         coroutineBtn = findViewById(R.id.coroutineBtn)
         retrofitCrudActivityBtn = findViewById(R.id.retrofitCrudActivityBtn)
         tabbedActivityBtn = findViewById(R.id.tabbedActivityBtn)
+        swipeCardsActivityBtn = findViewById(R.id.swipeCardsActivityBtn)
         recyclerView = findViewById(R.id.recyclerView)
     }
 
@@ -111,6 +115,9 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View, View.OnClic
             }
             v?.id?.equals(R.id.tabbedActivityBtn) == true -> {
                 startActivity(Intent(this, TikTokStyledActivity::class.java))
+            }
+            v?.id?.equals(R.id.swipeCardsActivityBtn) == true -> {
+                startActivity(Intent(this, SwipeCardActivity::class.java))
             }
         }
     }

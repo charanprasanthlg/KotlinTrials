@@ -18,7 +18,12 @@ class RetrofitCrudClassPresenter(var view: RetrofitCrudInterfaceView) :
                     call: Call<RetrofitCrudModel>,
                     response: Response<RetrofitCrudModel>
                 ) {
-                    view.showToast(response.body().toString())
+
+                    view.showToast("Response Code : " + response.code().toString()
+                            + "\nTitle : " + response.body()!!.title
+                            + "\nBody : " + response.body()!!.body
+                            + "\nID : " + response.body()!!.id
+                            + "\nUserID : " + response.body()!!.userId)
                     Log.d("RESULT____", response.body().toString())
                 }
 
@@ -37,7 +42,11 @@ class RetrofitCrudClassPresenter(var view: RetrofitCrudInterfaceView) :
                     call: Call<RetrofitCrudModel>,
                     response: Response<RetrofitCrudModel>
                 ) {
-                    view.showToast(response.body().toString())
+                    view.showToast("Response Code : " + response.code().toString()
+                            + "\nTitle : " + response.body()!!.title
+                            + "\nBody : " + response.body()!!.body
+                            + "\nID : " + response.body()!!.id
+                            + "\nUserID : " + response.body()!!.userId)
                     Log.d("RESULT____", response.body().toString())
                 }
 
@@ -51,7 +60,7 @@ class RetrofitCrudClassPresenter(var view: RetrofitCrudInterfaceView) :
     override fun deleteData(id: Int) {
         ServiceBuilder.instance.deleteUser(id).enqueue(object : Callback<Unit> {
             override fun onResponse(call: Call<Unit>, response: Response<Unit>) {
-                view.showToast(response.body().toString())
+                view.showToast("Response Code : " + response.code())
                 Log.d("RESULT____", "Success  " + response.body().toString())
             }
 

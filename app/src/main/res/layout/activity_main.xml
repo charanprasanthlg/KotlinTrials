@@ -89,6 +89,14 @@
             android:layout_marginStart="10dp"
             android:text="TikTok UI" />
 
+        <Button
+            android:textColor="@color/white"
+            android:id="@+id/swipeCardsActivityBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Swipe Cards" />
+
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

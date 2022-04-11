@@ -26,15 +26,15 @@
         android:layout_height="60dp"/>
 
     <TextView
-        android:layout_toStartOf="@id/buttonsLayout"
-        android:padding="20dp"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-        android:layout_alignParentBottom="true"
         android:id="@+id/description"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@id/buttonsLayout"
+        android:padding="20dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
 
 <!--    <ImageView-->
 <!--        android:id="@+id/backBtn"-->
