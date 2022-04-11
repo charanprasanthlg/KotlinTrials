@@ -2,13 +2,12 @@ package com.example.kotlintrials.retrofitcrud
 
 import android.util.Log
 import com.example.kotlintrials.services.ServiceBuilder
-import com.example.kotlintrials.model.RetrofitCrudModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class RetrofitCrudActivityPresenter(var view: RetrofitCrudContract.View) :
-    RetrofitCrudContract.Presenter {
+class RetrofitCrudClassPresenter(var view: RetrofitCrudInterfaceView) :
+    RetrofitCrudInterfacePresenter {
 
 
     override fun pushData(userId: Int, title: String, body: String) {

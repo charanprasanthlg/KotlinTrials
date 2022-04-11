@@ -1,4 +1,4 @@
-package com.example.kotlintrials.model
+package com.example.kotlintrials.retrofitcrud
 
 data class RetrofitCrudModel(
     var userId: Int,

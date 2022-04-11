@@ -8,7 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.kotlintrials.R
 
-class RetrofitCrudActivity : AppCompatActivity(), RetrofitCrudContract.View {
+class RetrofitCrudActivity : AppCompatActivity(), RetrofitCrudInterfaceView {
 
     lateinit var editText_userId: EditText
     lateinit var editText_title: EditText
@@ -16,7 +16,7 @@ class RetrofitCrudActivity : AppCompatActivity(), RetrofitCrudContract.View {
     lateinit var button_submitBtn: Button
     lateinit var button_updateBtn: Button
     lateinit var button_deleteBtn: Button
-    lateinit var presenter: RetrofitCrudActivityPresenter
+    lateinit var presenter: RetrofitCrudClassPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +43,7 @@ class RetrofitCrudActivity : AppCompatActivity(), RetrofitCrudContract.View {
         button_submitBtn = findViewById(R.id.button_submitBtn)
         button_updateBtn = findViewById(R.id.button_updateBtn)
         button_deleteBtn = findViewById(R.id.button_deleteBtn)
-        presenter = RetrofitCrudActivityPresenter(this)
+        presenter = RetrofitCrudClassPresenter(this)
     }
 
     override fun validateData(type: String) {
