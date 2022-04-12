@@ -15,27 +15,27 @@
         android:layout_marginTop="20dp">
 
         <Button
-            android:textColor="@color/white"
             android:id="@+id/addBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add" />
+            android:text="Add"
+            android:textColor="@color/white" />
 
         <Button
-            android:textColor="@color/white"
             android:id="@+id/deleteBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Delete" />
+            android:text="Delete"
+            android:textColor="@color/white" />
 
         <Button
-            android:textColor="@color/white"
             android:id="@+id/clearBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Clear" />
+            android:text="Clear"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
@@ -48,28 +48,28 @@
         android:orientation="horizontal">
 
         <Button
-            android:textColor="@color/white"
             android:id="@+id/retrofitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Retrofit" />
+            android:text="Retrofit"
+            android:textColor="@color/white" />
 
         <Button
-            android:textColor="@color/white"
             android:id="@+id/coroutineBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Coroutine" />
+            android:text="Coroutine"
+            android:textColor="@color/white" />
 
         <Button
-            android:textColor="@color/white"
-            android:id="@+id/retrofitCrudActivityBtn"
+            android:id="@+id/chartActivityBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="RetroFit CRUD" />
+            android:text="Charts"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
@@ -82,20 +82,28 @@
         android:orientation="horizontal">
 
         <Button
-            android:textColor="@color/white"
             android:id="@+id/tabbedActivityBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="TikTok UI" />
+            android:text="TikTok\nUI"
+            android:textColor="@color/white" />
 
         <Button
-            android:textColor="@color/white"
             android:id="@+id/swipeCardsActivityBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Swipe Cards" />
+            android:text="Swipe\nCards"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/retrofitCrudActivityBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="RetroFit\nCRUD"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 

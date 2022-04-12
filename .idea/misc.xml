@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/drawable/dialog_background.xml" value="0.1895" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_api.xml" value="0.15789473684210525" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_candle_stick.xml" value="0.176" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_coroutines.xml" value="0.15789473684210525" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_main.xml" value="0.152" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_ok_http.xml" value="0.20512820512820512" />

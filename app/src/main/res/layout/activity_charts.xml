@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".charts.ChartsActivity">
+
+    <com.github.mikephil.charting.charts.CandleStickChart
+        android:layout_above="@id/layout"
+        android:id="@+id/candleStickChart"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:layout_above="@id/layout"
+        android:id="@+id/lineChart"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioButton_candleStick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Candle Stick Chart"
+                android:textColor="@color/white"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radioButton_line"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Line Chart"
+                android:textColor="@color/white"/>
+        </RadioGroup>
+    </RelativeLayout>
+
+</RelativeLayout>

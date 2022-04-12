@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinTrials">
         <activity
+            android:name=".charts.ChartsActivity"
+            android:exported="false" />
+        <activity
             android:name=".swipecards.SwipeCardActivity"
             android:exported="false" />
         <activity
