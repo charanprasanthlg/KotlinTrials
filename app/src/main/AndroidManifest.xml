@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinTrials">
         <activity
+            android:name=".sqlitetrials.notesdetail.NotesDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sqlitetrials.notes.NotesActivity"
+            android:exported="false" />
+        <activity
             android:name=".charts.ChartsActivity"
             android:exported="false" />
         <activity

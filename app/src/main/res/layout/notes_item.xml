@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/relativeLayout_item"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/notes_layout_background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"/>
+
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:maxLines="1"
+        android:text="This is title"
+        android:textColor="@color/black"
+        android:textFontWeight="600"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/textView_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_title"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-light"
+        android:maxLines="4"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+</RelativeLayout>

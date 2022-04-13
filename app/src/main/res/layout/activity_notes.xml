@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".sqlitetrials.notes.NotesActivity">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:padding="15dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_notes"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:text="Take Note"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:textSize="26sp"
+            android:layout_marginStart="15dp"
+            android:fontFamily="sans-serif-light"
+            android:textFontWeight="600"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="visible"
+        android:id="@+id/recyclerView_notes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        tools:listitem="@layout/notes_item" />
+
+    <TextView
+        android:id="@+id/textView_noData"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#848484"
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:text="Add a new note using the\nbutton below"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_addNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text="Add Note"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

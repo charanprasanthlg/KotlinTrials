@@ -12,6 +12,7 @@ import com.example.kotlintrials.charts.ChartsActivity
 import com.example.kotlintrials.coroutines.CoroutinesActivity
 import com.example.kotlintrials.retrofitapigetrequest.RetrofitApiActivity
 import com.example.kotlintrials.retrofitcrud.RetrofitCrudActivity
+import com.example.kotlintrials.sqlitetrials.notes.NotesActivity
 import com.example.kotlintrials.swipecards.SwipeCardActivity
 import com.example.kotlintrials.tiktok.TikTokStyledActivity
 
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View, View.OnClic
     lateinit var swipeCardsActivityBtn: Button
     lateinit var tabbedActivityBtn: Button
     lateinit var chartActivityBtn: Button
+    lateinit var sqliteActivityBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,6 +62,7 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View, View.OnClic
         tabbedActivityBtn.setOnClickListener(this)
         swipeCardsActivityBtn.setOnClickListener(this)
         chartActivityBtn.setOnClickListener(this)
+        sqliteActivityBtn.setOnClickListener(this)
     }
 
     override fun initView() {
@@ -72,6 +75,7 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View, View.OnClic
         tabbedActivityBtn = findViewById(R.id.tabbedActivityBtn)
         swipeCardsActivityBtn = findViewById(R.id.swipeCardsActivityBtn)
         chartActivityBtn = findViewById(R.id.chartActivityBtn)
+        sqliteActivityBtn = findViewById(R.id.sqliteActivityBtn)
         recyclerView = findViewById(R.id.recyclerView)
     }
 
@@ -125,6 +129,9 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View, View.OnClic
             }
             v?.id?.equals(R.id.chartActivityBtn) == true -> {
                 startActivity(Intent(this, ChartsActivity::class.java))
+            }
+            v?.id?.equals(R.id.sqliteActivityBtn) == true -> {
+                startActivity(Intent(this, NotesActivity::class.java))
             }
         }
     }

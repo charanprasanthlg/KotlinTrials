@@ -1,4 +1,4 @@
-package com.example.kotlintrials.model
+package com.example.kotlintrials.retrofitapigetrequest.model
 
 import com.google.gson.annotations.SerializedName
 

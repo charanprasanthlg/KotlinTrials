@@ -1,6 +1,6 @@
 package com.example.kotlintrials.services
 
-import com.example.kotlintrials.model.DataModelItem
+import com.example.kotlintrials.retrofitapigetrequest.model.DataModelItem
 import com.example.kotlintrials.retrofitcrud.RetrofitCrudModel
 import retrofit2.Call
 import retrofit2.http.*

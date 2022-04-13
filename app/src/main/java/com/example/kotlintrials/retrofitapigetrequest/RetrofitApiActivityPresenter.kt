@@ -3,7 +3,7 @@ package com.example.kotlintrials.retrofitapigetrequest
 import android.content.Context
 import android.widget.TextView
 import android.widget.Toast
-import com.example.kotlintrials.model.DataModelItem
+import com.example.kotlintrials.retrofitapigetrequest.model.DataModelItem
 import com.example.kotlintrials.services.ServiceBuilder
 import retrofit2.Call
 import retrofit2.Callback
