@@ -15,6 +15,7 @@ class NotesDetailActivity : AppCompatActivity(), NotesDetailActivityInterfaceVie
     View.OnClickListener {
 
     lateinit var imageView_backBtn: ImageView
+    lateinit var relativeLayout_headerLayout: RelativeLayout
     lateinit var textView_saveBtn: TextView
     lateinit var editText_title: EditText
     lateinit var editText_body: EditText
@@ -23,6 +24,9 @@ class NotesDetailActivity : AppCompatActivity(), NotesDetailActivityInterfaceVie
     lateinit var bodyString: String
 
     lateinit var noteType: String
+
+    var color: Int? = null
+    var id: Int? = null
 
     lateinit var presenter: NotesDetailActivityClassPresenter
 
@@ -65,17 +69,21 @@ class NotesDetailActivity : AppCompatActivity(), NotesDetailActivityInterfaceVie
         textView_saveBtn = findViewById(R.id.textView_saveBtn)
         editText_title = findViewById(R.id.editText_title)
         editText_body = findViewById(R.id.editText_body)
+        relativeLayout_headerLayout = findViewById(R.id.relativeLayout_headerLayout)
         presenter = NotesDetailActivityClassPresenter(this)
     }
 
     override fun getNotesData() {
         val bundle = intent.extras
-        val titleString = bundle!!.getString("title")
-        val bodyString = bundle.getString("body")
+        val titleStr = bundle!!.getString("title")
+        val bodyStr = bundle.getString("body")
         noteType = bundle.getString("type")!!
+        color = bundle.getInt("color")
+        id = bundle.getInt("id")
 
-        editText_title.setText(titleString)
-        editText_body.setText(bodyString)
+        editText_title.setText(titleStr)
+        editText_body.setText(bodyStr)
+        relativeLayout_headerLayout.setBackgroundColor(color!!)
     }
 
     override fun onClick(v: View?) {
@@ -103,10 +111,25 @@ class NotesDetailActivity : AppCompatActivity(), NotesDetailActivityInterfaceVie
             if (bodyString.isEmpty()) bodyString = ""
 
             when (noteType) {
-                "new" -> presenter.saveData(titleString, bodyString, this)
-                "old" -> presenter.saveData(titleString, bodyString, this)
+                "new" -> {
+                    presenter.saveData(titleString, bodyString, this)
+                    saved = true
+                }
+                "old" -> {
+                    if (id != null && color != null) {
+                        presenter.updateData(
+                            id = id!!,
+                            title = titleString,
+                            body = bodyString,
+                            color = color!!,
+                            context = this
+                        )
+                        saved = true
+                    } else {
+                        showToast("ID or color is null")
+                    }
+                }
             }
-            saved = true
 
             when (type) {
                 "backBtn" -> showToast("Note Saved. Press back again to go back.")

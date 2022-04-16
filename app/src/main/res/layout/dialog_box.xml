@@ -8,13 +8,13 @@
     android:layout_height="150dp">
 
     <TextView
-        android:id="@+id/textview"
-        android:textSize="20sp"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/textview_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Alert dialog from coroutines as well as normal functionality"
         android:textColor="@color/black"
-        android:text="Alert dialog from coroutines as well as normal functionality"/>
+        android:textSize="20sp" />
 
     <TextView
         android:textSize="20sp"

@@ -9,7 +9,7 @@
     tools:context=".sqlitetrials.notesdetail.NotesDetailActivity">
 
     <RelativeLayout
-        android:id="@+id/layout"
+        android:id="@+id/relativeLayout_headerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -17,28 +17,28 @@
             android:id="@+id/imageView_backBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_back_black"
             android:layout_centerVertical="true"
             android:layout_margin="15dp"
-            android:backgroundTint="@color/white"/>
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_back_black" />
 
         <TextView
             android:id="@+id/textView_saveBtn"
-            android:layout_margin="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:layout_margin="15dp"
+            android:text="Save"
             android:textColor="@color/purple_700"
-            android:layout_gravity="end"/>
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
     <ScrollView
-        android:layout_below="@id/layout"
+        android:layout_below="@id/relativeLayout_headerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -65,19 +65,19 @@
 
             <EditText
                 android:id="@+id/editText_body"
-                android:cursorVisible="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_below="@id/editText_title"
+                android:layout_marginTop="13dp"
+                android:background="@color/white"
+                android:cursorVisible="true"
                 android:hint="Body of the Note"
                 android:paddingStart="15dp"
-                android:background="@color/white"
-                android:layout_marginTop="10dp"
                 android:paddingEnd="15dp"
-                android:textSize="19sp"
-                android:textFontWeight="400"
                 android:textColor="@color/black"
                 android:textColorHint="#848484"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:textFontWeight="400"
+                android:textSize="19sp" />
 
         </RelativeLayout>
 

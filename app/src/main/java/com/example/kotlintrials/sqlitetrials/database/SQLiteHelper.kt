@@ -8,7 +8,6 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
 import com.example.kotlintrials.sqlitetrials.model.NotesModel
-import java.lang.Exception
 
 class SQLiteHelper(context: Context) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
@@ -50,7 +49,7 @@ class SQLiteHelper(context: Context) :
 
         val success = db.insert(TABLE_NAME, null, contentValues)
         db.close()
-        Log.d("Saved", success.toString())
+        Log.d("Saved", "inserted $success")
         return success
     }
 
@@ -86,7 +85,7 @@ class SQLiteHelper(context: Context) :
             }while (cursor.moveToNext())
         }
 
-        Log.d("Saved", notesList.toString())
+        Log.d("Saved", "saved $notesList")
         return notesList
     }
 
@@ -99,10 +98,26 @@ class SQLiteHelper(context: Context) :
         contentValues.put(BODY, note.body)
         contentValues.put(COLOR, note.color)
 
-        val success = db.update(TABLE_NAME, contentValues, "id=" + note.id, null)
+        val whereClause = "id = ?"
+        val whereArgs = arrayOf(note.id.toString())
+
+        val success = db.update(TABLE_NAME, contentValues, whereClause, whereArgs)
         db.close()
 
-        Log.d("Saved", success.toString())
+        Log.d("Saved", "updated $success")
+        return success
+    }
+
+    fun deleteData(id : Int) : Int {
+        val db = this.writableDatabase
+        //if where clause is null, all the rows in the table will be deleted
+        val whereClause = "id = ?"
+        val whereArgs = arrayOf(id.toString())
+
+        val success =  db.delete(TABLE_NAME,whereClause, whereArgs) //returns no. of affected rows
+        db.close()
+
+        Log.d("Saved", "deleted $success")
         return success
     }
 }

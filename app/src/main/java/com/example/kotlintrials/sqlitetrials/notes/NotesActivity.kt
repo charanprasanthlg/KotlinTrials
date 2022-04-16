@@ -66,7 +66,7 @@ class NotesActivity : AppCompatActivity(), NotesActivityInterfaceView {
             linearLayoutManager = LinearLayoutManager(this)
             recyclerView_notes.layoutManager = linearLayoutManager
 
-            adapter = NotesAdapter(notesList)
+            adapter = NotesAdapter(notesList, presenter)
             recyclerView_notes.adapter = adapter
         }
     }

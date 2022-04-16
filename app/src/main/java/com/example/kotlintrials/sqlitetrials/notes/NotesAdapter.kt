@@ -1,21 +1,31 @@
 package com.example.kotlintrials.sqlitetrials.notes
 
+import android.annotation.SuppressLint
+import android.app.AlertDialog
+import android.app.Dialog
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.cardview.widget.CardView
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlintrials.R
 import com.example.kotlintrials.sqlitetrials.model.NotesModel
 import com.example.kotlintrials.sqlitetrials.notesdetail.NotesDetailActivity
+import org.w3c.dom.Text
 
 
-class NotesAdapter(var notesList : ArrayList<NotesModel>) :
+class NotesAdapter(
+    private var notesList: ArrayList<NotesModel>,
+    var presenter: NotesActivityClassPresenter
+) :
     RecyclerView.Adapter<NotesAdapter.ViewHolder>() {
 
     lateinit var context: Context
@@ -30,18 +40,27 @@ class NotesAdapter(var notesList : ArrayList<NotesModel>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val unwrappedDrawable = AppCompatResources.getDrawable(context, R.drawable.notes_layout_background)
-        val wrappedDrawable = DrawableCompat.wrap(unwrappedDrawable!!)
-        DrawableCompat.setTint(wrappedDrawable, notesList[position].color)
+//        val unwrappedDrawable =
+//            AppCompatResources.getDrawable(context, R.drawable.notes_layout_background)
+//        val wrappedDrawable = DrawableCompat.wrap(unwrappedDrawable!!)
+//        DrawableCompat.setTint(wrappedDrawable, notesList[position].color)
 
+        holder.cardView_item.setCardBackgroundColor(notesList[position].color)
         holder.textView_title.text = notesList[position].title
         holder.textView_body.text = notesList[position].body
-        holder.relativeLayout_item.setOnClickListener {
+        holder.cardView_item.setOnClickListener {
             val intent = Intent(context, NotesDetailActivity::class.java)
+            intent.putExtra("id", notesList[position].id)
+            intent.putExtra("color", notesList[position].color)
             intent.putExtra("title", notesList[position].title)
             intent.putExtra("body", notesList[position].body)
             intent.putExtra("type", "old")
             context.startActivity(intent)
+        }
+        holder.cardView_item.setOnLongClickListener {
+            showDialogBox(notesList[position].id, position, context)
+            true
+            //above true is for setOnLongClickListener
         }
     }
 
@@ -52,6 +71,31 @@ class NotesAdapter(var notesList : ArrayList<NotesModel>) :
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var textView_title = itemView.findViewById<TextView>(R.id.textView_title)
         var textView_body = itemView.findViewById<TextView>(R.id.textView_body)
-        var relativeLayout_item = itemView.findViewById<RelativeLayout>(R.id.relativeLayout_item)
+        var cardView_item = itemView.findViewById<CardView>(R.id.cardView_item)
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    private fun showDialogBox(id: Int, position: Int, context: Context) {
+
+        val dialog = Dialog(context)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setContentView(R.layout.dialog_box)
+
+        val textView = dialog.findViewById<TextView>(R.id.textview_text)
+        val confirmBtn = dialog.findViewById<TextView>(R.id.confirmBtn)
+        val cancelBtn = dialog.findViewById<TextView>(R.id.cancelBtn)
+
+        textView.text = "Are you sure you want to delete this note?"
+
+        confirmBtn.setOnClickListener {
+            presenter.deleteData(id, context)
+            dialog.dismiss()
+            notesList.removeAt(position)
+//            notifyItemRemoved(position)
+            notifyDataSetChanged()
+        }
+        cancelBtn.setOnClickListener { dialog.dismiss() }
+
+        dialog.show()
     }
 }
