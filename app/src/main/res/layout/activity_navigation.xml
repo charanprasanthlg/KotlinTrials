@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    tools:context=".NavigationActivity">
+
+    <Button
+        android:id="@+id/recyclerViewBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/retrofitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retrofit"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/coroutineBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coroutine"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/chartActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Charts"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/tabbedActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TikTok UI"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/swipeCardsActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swipe Cards"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/retrofitCrudActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RetroFit CRUD"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/sqliteActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SQLite"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/glassActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glass"
+        android:textColor="@color/white" />
+
+</LinearLayout>

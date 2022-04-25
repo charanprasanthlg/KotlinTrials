@@ -1,5 +1,6 @@
 package com.example.kotlintrials.adapters
 
+import android.view.ActionMode
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,18 +13,18 @@ import com.example.kotlintrials.R
 import java.util.ArrayList
 import kotlin.random.Random
 
-class RecyclerAdapter(private val data: ArrayList<String>) :
-    RecyclerView.Adapter<RecyclerAdapter.ViewHolder>(){
+class RecyclerAdapter(
+    private val data: ArrayList<String>
+) :
+    RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.text.text = position.toString() + ". " + data[position]
-        holder.layout.setOnClickListener { data.removeAt(position) }
         Glide.with(holder.layout).load(randomImage()).into(holder.img);
     }
 

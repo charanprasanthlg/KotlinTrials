@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:padding="25dp"
+    android:background="@drawable/dialog_background_new"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view_color_1"
+            android:background="@drawable/color_background"
+            android:backgroundTint="#fff6e7"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+
+        <View
+            android:id="@+id/view_color_2"
+            android:background="@drawable/color_background"
+            android:backgroundTint="#f2f8ff"
+            android:layout_marginStart="15dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+
+        <View
+            android:id="@+id/view_color_3"
+            android:background="@drawable/color_background"
+            android:backgroundTint="#e5ffe6"
+            android:layout_marginStart="15dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+
+        <View
+            android:id="@+id/view_color_4"
+            android:background="@drawable/color_background"
+            android:backgroundTint="#f6f6f6"
+            android:layout_marginStart="15dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+
+        <View
+            android:id="@+id/view_color_5"
+            android:background="@drawable/color_background"
+            android:backgroundTint="#FFFBE5"
+            android:layout_marginStart="15dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+
+        <View
+            android:id="@+id/view_color_6"
+            android:background="@drawable/color_background"
+            android:backgroundTint="#FFE5E5"
+            android:layout_marginStart="15dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

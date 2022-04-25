@@ -7,9 +7,9 @@ import com.example.kotlintrials.sqlitetrials.model.NotesModel
 
 class NotesDetailActivityClassPresenter(var view: NotesDetailActivityInterfaceView) :
     NotesDetailActivityInterfacePresenter {
-    override fun saveData(title: String, body: String, context: Context) {
+    override fun saveData(title: String, body: String, color:Int, context: Context) {
         val helper = SQLiteHelper(context)
-        val note = NotesModel(title = title.trim(), body = body.trim())
+        val note = NotesModel(title = title.trim(), body = body.trim(), color = color)
         val result = helper.insertNote(note)
         Log.d("Saved", "saveDATA_$result")
     }

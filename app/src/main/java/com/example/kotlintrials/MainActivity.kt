@@ -38,13 +38,6 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View, View.OnClic
     lateinit var addBtn: Button
     lateinit var deleteBtn: Button
     lateinit var clearBtn: Button
-    lateinit var retrofitBtn: Button
-    lateinit var coroutineBtn: Button
-    lateinit var retrofitCrudActivityBtn: Button
-    lateinit var swipeCardsActivityBtn: Button
-    lateinit var tabbedActivityBtn: Button
-    lateinit var chartActivityBtn: Button
-    lateinit var sqliteActivityBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,26 +49,12 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View, View.OnClic
         addBtn.setOnClickListener(this)
         deleteBtn.setOnClickListener(this)
         clearBtn.setOnClickListener(this)
-        retrofitBtn.setOnClickListener(this)
-        coroutineBtn.setOnClickListener(this)
-        retrofitCrudActivityBtn.setOnClickListener(this)
-        tabbedActivityBtn.setOnClickListener(this)
-        swipeCardsActivityBtn.setOnClickListener(this)
-        chartActivityBtn.setOnClickListener(this)
-        sqliteActivityBtn.setOnClickListener(this)
     }
 
     override fun initView() {
         addBtn = findViewById(R.id.addBtn)
         deleteBtn = findViewById(R.id.deleteBtn)
         clearBtn = findViewById(R.id.clearBtn)
-        retrofitBtn = findViewById(R.id.retrofitButton)
-        coroutineBtn = findViewById(R.id.coroutineBtn)
-        retrofitCrudActivityBtn = findViewById(R.id.retrofitCrudActivityBtn)
-        tabbedActivityBtn = findViewById(R.id.tabbedActivityBtn)
-        swipeCardsActivityBtn = findViewById(R.id.swipeCardsActivityBtn)
-        chartActivityBtn = findViewById(R.id.chartActivityBtn)
-        sqliteActivityBtn = findViewById(R.id.sqliteActivityBtn)
         recyclerView = findViewById(R.id.recyclerView)
     }
 
@@ -88,14 +67,13 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View, View.OnClic
     }
 
     override fun onClick(v: View?) {
-
-        when {
-            v?.id?.equals(R.id.addBtn) == true -> {
+        when(v!!.id) {
+            R.id.addBtn -> {
                 data.add("hello")
                 adapter.notifyDataSetChanged()
                 recyclerView.smoothScrollToPosition(data.size - 1)
             }
-            v?.id?.equals(R.id.deleteBtn) == true -> {
+            R.id.deleteBtn -> {
                 if (data.size > 0) {
                     data.removeAt(0)
                     adapter.notifyDataSetChanged()
@@ -104,34 +82,13 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View, View.OnClic
                     Toast.makeText(applicationContext, "no data", Toast.LENGTH_SHORT).show()
                 }
             }
-            v?.id?.equals(R.id.clearBtn) == true -> {
+            R.id.clearBtn -> {
                 if (data.size > 0) {
                     data.clear()
                     adapter.notifyDataSetChanged()
                 } else {
                     Toast.makeText(applicationContext, "no data", Toast.LENGTH_SHORT).show()
                 }
-            }
-            v?.id?.equals(R.id.retrofitButton) == true -> {
-                startActivity(Intent(this, RetrofitApiActivity::class.java))
-            }
-            v?.id?.equals(R.id.coroutineBtn) == true -> {
-                startActivity(Intent(this, CoroutinesActivity::class.java))
-            }
-            v?.id?.equals(R.id.retrofitCrudActivityBtn) == true -> {
-                startActivity(Intent(this, RetrofitCrudActivity::class.java))
-            }
-            v?.id?.equals(R.id.tabbedActivityBtn) == true -> {
-                startActivity(Intent(this, TikTokStyledActivity::class.java))
-            }
-            v?.id?.equals(R.id.swipeCardsActivityBtn) == true -> {
-                startActivity(Intent(this, SwipeCardActivity::class.java))
-            }
-            v?.id?.equals(R.id.chartActivityBtn) == true -> {
-                startActivity(Intent(this, ChartsActivity::class.java))
-            }
-            v?.id?.equals(R.id.sqliteActivityBtn) == true -> {
-                startActivity(Intent(this, NotesActivity::class.java))
             }
         }
     }

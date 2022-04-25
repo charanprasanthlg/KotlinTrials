@@ -36,6 +36,7 @@ class NotesActivity : AppCompatActivity(), NotesActivityInterfaceView {
             intent.putExtra("title", "")
             intent.putExtra("body", "")
             intent.putExtra("type", "new")
+            intent.putExtra("color", 0xfffff6e7.toInt())
             startActivity(intent)
         }
     }

@@ -40,11 +40,6 @@ class NotesAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-//        val unwrappedDrawable =
-//            AppCompatResources.getDrawable(context, R.drawable.notes_layout_background)
-//        val wrappedDrawable = DrawableCompat.wrap(unwrappedDrawable!!)
-//        DrawableCompat.setTint(wrappedDrawable, notesList[position].color)
-
         holder.cardView_item.setCardBackgroundColor(notesList[position].color)
         holder.textView_title.text = notesList[position].title
         holder.textView_body.text = notesList[position].body
