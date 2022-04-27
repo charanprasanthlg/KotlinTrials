@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.Toast
 import com.example.kotlintrials.charts.ChartsActivity
 import com.example.kotlintrials.coroutines.CoroutinesActivity
+import com.example.kotlintrials.flowscoroutines.FlowsActivity
 import com.example.kotlintrials.glass.GlassActivity
 import com.example.kotlintrials.retrofitapigetrequest.RetrofitApiActivity
 import com.example.kotlintrials.retrofitcrud.RetrofitCrudActivity
@@ -26,6 +27,7 @@ class NavigationActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var sqliteActivityBtn: Button
     lateinit var recyclerViewBtn: Button
     lateinit var glassActivityBtn: Button
+    lateinit var flowsActivityBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +42,7 @@ class NavigationActivity : AppCompatActivity(), View.OnClickListener {
         sqliteActivityBtn = findViewById(R.id.sqliteActivityBtn)
         recyclerViewBtn = findViewById(R.id.recyclerViewBtn)
         glassActivityBtn = findViewById(R.id.glassActivityBtn)
+        flowsActivityBtn = findViewById(R.id.flowsActivityBtn)
 
         retrofitBtn.setOnClickListener(this)
         coroutineBtn.setOnClickListener(this)
@@ -50,37 +53,40 @@ class NavigationActivity : AppCompatActivity(), View.OnClickListener {
         sqliteActivityBtn.setOnClickListener(this)
         recyclerViewBtn.setOnClickListener(this)
         glassActivityBtn.setOnClickListener(this)
+        flowsActivityBtn.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
-
-        when {
-            v?.id?.equals(R.id.recyclerViewBtn) == true -> {
+        when (v!!.id) {
+            R.id.recyclerViewBtn -> {
                 startActivity(Intent(this, MainActivity::class.java))
             }
-            v?.id?.equals(R.id.retrofitButton) == true -> {
+            R.id.retrofitButton -> {
                 startActivity(Intent(this, RetrofitApiActivity::class.java))
             }
-            v?.id?.equals(R.id.coroutineBtn) == true -> {
+            R.id.coroutineBtn -> {
                 startActivity(Intent(this, CoroutinesActivity::class.java))
             }
-            v?.id?.equals(R.id.retrofitCrudActivityBtn) == true -> {
+            R.id.retrofitCrudActivityBtn -> {
                 startActivity(Intent(this, RetrofitCrudActivity::class.java))
             }
-            v?.id?.equals(R.id.tabbedActivityBtn) == true -> {
+            R.id.tabbedActivityBtn -> {
                 startActivity(Intent(this, TikTokStyledActivity::class.java))
             }
-            v?.id?.equals(R.id.swipeCardsActivityBtn) == true -> {
+            R.id.swipeCardsActivityBtn -> {
                 startActivity(Intent(this, SwipeCardActivity::class.java))
             }
-            v?.id?.equals(R.id.chartActivityBtn) == true -> {
+            R.id.chartActivityBtn -> {
                 startActivity(Intent(this, ChartsActivity::class.java))
             }
-            v?.id?.equals(R.id.sqliteActivityBtn) == true -> {
+            R.id.sqliteActivityBtn -> {
                 startActivity(Intent(this, NotesActivity::class.java))
             }
-            v?.id?.equals(R.id.glassActivityBtn) == true -> {
+            R.id.glassActivityBtn -> {
                 startActivity(Intent(this, GlassActivity::class.java))
+            }
+            R.id.flowsActivityBtn -> {
+                startActivity(Intent(this, FlowsActivity::class.java))
             }
         }
     }

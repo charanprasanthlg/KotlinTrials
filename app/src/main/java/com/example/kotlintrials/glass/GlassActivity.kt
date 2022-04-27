@@ -1,6 +1,5 @@
 package com.example.kotlintrials.glass
 
-import android.animation.Animator
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import androidx.appcompat.app.AppCompatActivity
@@ -20,7 +19,7 @@ class GlassActivity : AppCompatActivity() {
         handleAnimation(layout)
     }
 
-    fun handleAnimation(view: View){
+    private fun handleAnimation(view: View){
         val animator = ObjectAnimator.ofFloat(view, "y", 600f)
         animator.duration = 1000
         val animatorSet = AnimatorSet()

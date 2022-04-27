@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinTrials">
         <activity
+            android:name=".flowscoroutines.FlowsActivity"
+            android:exported="false" />
+        <activity
             android:name=".glass.GlassActivity"
             android:exported="false" />
         <activity
