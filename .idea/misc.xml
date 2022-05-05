@@ -13,15 +13,18 @@
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/drawable/notes_layout_background.xml" value="0.1895" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_api.xml" value="0.15789473684210525" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_candle_stick.xml" value="0.176" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_complex_json.xml" value="0.16" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_coroutines.xml" value="0.15789473684210525" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_flows.xml" value="0.20512820512820512" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_glass.xml" value="0.20512820512820512" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_mvvm.xml" value="0.20512820512820512" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_navigation.xml" value="0.1935897435897436" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_notes.xml" value="0.20512820512820512" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_notes_detail.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_ok_http.xml" value="0.20512820512820512" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_okhttp_api.xml" value="0.15756578947368421" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_pagination.xml" value="0.20512820512820512" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_retrofit_api.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_retrofit_crud.xml" value="0.20512820512820512" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_sqlite.xml" value="0.20512820512820512" />
@@ -29,6 +32,7 @@
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_tabbed.xml" value="0.15789473684210525" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/activity_tik_tok_styled.xml" value="0.15789473684210525" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/card_layout.xml" value="0.20512820512820512" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/country_list_item.xml" value="0.20512820512820512" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/dialog_box.xml" value="0.15789473684210525" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/dialog_pickcolor.xml" value="0.264" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/fragment_action.xml" value="0.14901315789473685" />
@@ -36,6 +40,7 @@
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/glassmorphic_ui.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/item_layout.xml" value="0.14901315789473685" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/notes_item.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/pagination_item.xml" value="0.20512820512820512" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/swipe_card_dialog.xml" value="0.20512820512820512" />
         <entry key="..\:/AndroidStudioProjects/KotlinTrials/app/src/main/res/layout/tiktok_ui.xml" value="0.2" />
       </map>

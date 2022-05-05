@@ -1,5 +1,6 @@
 package com.example.kotlintrials.services
 
+import com.example.kotlintrials.complexjson.models.TestItem
 import com.example.kotlintrials.flowscoroutines.CommentModel
 import com.example.kotlintrials.retrofitapigetrequest.model.DataModelItem
 import com.example.kotlintrials.retrofitcrud.RetrofitCrudModel
@@ -12,6 +13,9 @@ interface ApiInterface {
 
     @GET("todos/")
     fun getDataFromApi(): Call<List<DataModelItem>>
+
+    @GET("users/")
+    fun getUserDataFromApi(): Call<List<TestItem>>
 
     @GET("comments/")
     suspend fun getComments(): Response<List<CommentModel>>

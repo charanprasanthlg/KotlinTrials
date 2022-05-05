@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinTrials">
         <activity
+            android:name=".complexjson.view.ComplexJsonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pagination.PaginationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mvvmretrofit.view.MvvmActivity"
+            android:exported="false" />
+        <activity
             android:name=".flowscoroutines.FlowsActivity"
             android:exported="false" />
         <activity
@@ -56,6 +65,14 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+        <service
+            android:name=".services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+<!--                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />-->
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
